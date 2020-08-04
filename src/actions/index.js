@@ -31,3 +31,21 @@ export const fetchBlogs = () => {
         })
     }
   }
+
+  // third fetch call. this will make the call for deleting a blog 
+  // and persisting it to the database
+
+  export const deleteBlog = blogId => {
+    return dispatch => {
+      return fetch(`http://localhost:3000/blogs/${blogId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      })
+        .then(res => res.json())
+        .then(blog => {
+          dispatch({type: "REMOVE_BLOG", payload: blogId})
+        })
+    }
+  }
