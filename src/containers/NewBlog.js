@@ -16,6 +16,13 @@ class NewBlog extends Component {
         })
     }
 
+    handleSubmit = e => {
+        e.preventDefault()
+        this.props.addBlog(this.state)
+        document.getElementById('new-blog-form').reset()
+        this.props.history.push('/blogs')
+    }
+
 
 
 
@@ -23,3 +30,5 @@ class NewBlog extends Component {
 
 
 }
+
+export default connect(null, { addBlog })(NewBlog)
