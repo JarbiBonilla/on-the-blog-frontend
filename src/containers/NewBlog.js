@@ -23,6 +23,10 @@ class NewBlog extends Component {
         this.props.history.push('/blogs')
     }
 
+    render() {
+        return(//entire form goes here.)
+    }
+
 
 
 
