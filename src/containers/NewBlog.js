@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { addBlog } from '../actions/index'
+import { addBlog } from '../actions'
 import { connect } from 'react-redux'
 
 class NewBlog extends Component {
@@ -12,7 +12,7 @@ class NewBlog extends Component {
 
     handleChange = e => {
         this.setState({
-          [e.target.title]: e.target.value
+          [e.target.name]: e.target.value
         })
     }
 

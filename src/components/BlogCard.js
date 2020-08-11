@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { deleteBlog } from '../actions/index'
+import { deleteBlog } from '../actions'
 import DeleteButton from './DeleteButton'
 
 const BlogCard = ({blog, deleteBlog}) => {
