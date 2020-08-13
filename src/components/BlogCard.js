@@ -1,19 +1,17 @@
 import React from 'react'
-import { connect } from 'react-redux'
-import { deleteBlog } from '../actions'
 import DeleteButton from './DeleteButton'
 
-const BlogCard = ({blog, deleteBlog}) => {
+const BlogCard = ({blog}) => {
   return (
     <div className="blog-card">
       <span id="blog-title">{blog.title}</span> 
       <span id="blog-content">{blog.content}</span> <br />
       <span id="blog-link">{blog.link}</span> <br />
       <span id="blog-favorite">{blog.favorite}</span> <br />
-      < DeleteButton name="Delete Blog" blog_id={blog.id} deleteBlog={deleteBlog}/>
+      < DeleteButton name="Delete Blog" blog={blog} />
       <br /><br />
     </div>
   )
 }
 
-export default connect(null, { deleteBlog })(BlogCard)
+export default BlogCard

@@ -12,11 +12,12 @@ class Blogs extends Component {
     }
 
     render() {
+        const blogsList = this.props.blogs.map((b, id) => < BlogCard key={id} blog={b} />)
         return(
-          <div className="blogs-container">
-            < AddBlogButton name="Create Your Blog" addBlog={this.props.addBlog}/>
-            {this.props.blogs.map((b, id) => < BlogCard key={id} blog={b} />)}
-          </div>
+            <div className="blogs-container">
+                < AddBlogButton name="Add Blog" addBlog={this.props.addBlog} />
+                {blogsList}
+            </div>
         )
     }
 }
@@ -27,11 +28,5 @@ const mapStateToProps = state => {
     }
 }
 
-const mapDispatchToProps = dispatch => {
-    return {
-      fetchBlogs: () => dispatch(fetchBlogs()),
-      addBlog: blog => dispatch(addBlog(blog))
-    }
-}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Blogs)
+export default connect(mapStateToProps, { fetchBlogs, addBlog })(Blogs)

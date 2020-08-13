@@ -45,7 +45,7 @@ export const fetchBlogs = () => {
       })
         .then(res => res.json())
         .then(blogId => {
-          dispatch({type: "REMOVE_BLOG", payload: blogId})
+          dispatch({type: "DELETE_BLOG", payload: blogId})
         })
     }
   }

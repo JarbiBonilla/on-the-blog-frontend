@@ -6,8 +6,9 @@ export default (state = [], action) => {
         case "ADD_BLOG":
             return [...state, action.payload]
 
-        case "REMOVE_BLOG":
-            return state.filter(blog => blog.id !== action.payload)
+        case "DELETE_BLOG":
+            let updatedBlogsList = state.filter(blog => blog.id !== action.payload.id)
+            return [...updatedBlogsList]
 
         default: 
             return state
