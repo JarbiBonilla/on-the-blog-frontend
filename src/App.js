@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Header from './components/Header'
 import Home from './containers/Home'
 import NewBlog from './containers/NewBlog'
 import Blogs from './containers/Blogs'
@@ -11,6 +12,7 @@ class App extends Component {
   render() {
     return (
       <Router>
+        <Header />
         <div id="head-container">
           <NavBar />
            <Switch>

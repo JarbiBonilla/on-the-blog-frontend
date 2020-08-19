@@ -4,7 +4,7 @@ class Home extends Component {
     render() {
         return (
             <div id="home-container">
-                <h1>Welcome To On The Blog!</h1>
+                <h3>On The Blog is a site where you can come and express your thoughts and feelings! Click on "Add a Blog" above to get started!</h3>
             </div>
         )
     }
