@@ -6,8 +6,7 @@ class NewBlog extends Component {
     state = {
         title: '',
         content: '',
-        link: '',
-        favorite: 0
+        link: ''
     }
 
     handleChange = e => {
@@ -32,7 +31,7 @@ class NewBlog extends Component {
               <br /> <br />
       
               <label>Enter Blog Content Here!</label> <br />
-              <input type="text" onChange={this.handleChange} value={this.state.content} name="content"/>
+              <textarea type="text" onChange={this.handleChange} value={this.state.content} name="content"/>
               <br /> <br />
       
               <label>Add Links Here (if applicable)</label> <br />
