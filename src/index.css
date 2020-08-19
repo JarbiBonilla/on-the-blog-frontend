@@ -30,3 +30,21 @@ code {
 #blog-link {
   color: rgb(0, 1, 10);
 }
+
+#new-blog-form {
+  float: center;
+  width: auto;
+  height: auto;
+  background-color:ghostwhite;
+  color: black;
+  margin:15px;
+  text-align: left;
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  color: black;
+  position: fixed; 
+  bottom: 0; 
+}

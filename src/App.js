@@ -4,6 +4,7 @@ import Home from './containers/Home'
 import NewBlog from './containers/NewBlog'
 import Blogs from './containers/Blogs'
 import NavBar from './components/NavBar'
+import Footer from './components/Footer'
 import './App.css';
 
 class App extends Component {
@@ -18,6 +19,8 @@ class App extends Component {
              <Route exact path="/blogs/new" component={ NewBlog } />
            </Switch>
         </div>
+        <br></br>
+        <Footer />
       </Router>
     )
   }
