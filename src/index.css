@@ -11,3 +11,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.blog-card{
+  float:left;
+  width:393px;
+  height: 400px;
+  background-color: ghostwhite;
+  color: #000080;
+  margin:15px;
+  text-align: center;
+}
+
+#blog-title {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+#blog-link {
+  color: rgb(0, 1, 10);
+}
