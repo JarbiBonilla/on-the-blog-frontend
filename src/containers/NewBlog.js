@@ -6,7 +6,8 @@ class NewBlog extends Component {
     state = {
         title: '',
         content: '',
-        link: ''
+        link: '',
+        favorite: 0
     }
 
     handleChange = e => {
